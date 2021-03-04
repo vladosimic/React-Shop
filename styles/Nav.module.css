@@ -1,0 +1,23 @@
+.navbar {
+  text-align: center;
+}
+.navbar ul li {
+  list-style: none;
+
+  cursor: pointer;
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  background: rgb(247, 244, 244);
+  box-shadow: 1px 1px 5px #e1e0e0;
+  position: fixed;
+  width: 100%;
+  margin: 0 auto;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

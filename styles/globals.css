@@ -5,7 +5,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
+#__next {
+  margin-top: 100px;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -13,4 +15,24 @@ a {
 
 * {
   box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+h2 {
+  border-bottom: 4px solid rgb(79, 79, 153);
+  padding-bottom: 5px;
+}
+button {
+  background: rgba(53, 52, 138, 0.548);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  margin-top: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+button:hover {
+  background: blueviolet;
 }
