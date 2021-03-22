@@ -1,7 +1,6 @@
 import React, { useContext, useState, useEffect, useReducer } from "react";
 import reducer from "../components/Reducer";
-
-const URL = "https://fakestoreapi.com/products";
+import { products } from "../products";
 
 const AppContext = React.createContext();
 
@@ -20,18 +19,16 @@ const Context = ({ children }) => {
     ...new Set(mainState.cart.map((item) => item.category)),
   ];
 
-  const fetchData = async () => {
+  const getData = () => {
     dispatch({ type: "LOADING" });
-    const res = await fetch(URL);
-    const newItems = await res.json();
-    const updateCart = newItems.map((item) => {
+    const updateCart = products.map((item) => {
       return { ...item, singleAmount: 0 };
     });
     dispatch({ type: "DISPLAY_ITEMS", payload: updateCart });
   };
 
   useEffect(() => {
-    fetchData();
+    getData();
   }, []);
 
   const addToCart = (id) => {
@@ -71,3 +68,4 @@ export const useAppContext = () => {
 };
 
 export { AppContext, Context };
+
